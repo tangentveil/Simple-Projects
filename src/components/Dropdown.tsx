@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import type { Data } from "../App";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 type Items = {
   data: Data[];
