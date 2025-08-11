@@ -1,4 +1,5 @@
 import "./App.css";
+import Carousel from "./components/Carousel";
 import Dropdown from "./components/Dropdown";
 import Table_VirtualScrolling from "./components/Table_VirtualScrolling";
 import createRandomUser, { type User } from "./utils/faker";
@@ -24,13 +25,14 @@ const data: Data[] = [
 ];
 
 const App = () => {
-  const users: User[] = Array.from({ length: 1000 }, () => createRandomUser());
+  const users: User[] = Array.from({ length: 10 }, () => createRandomUser());
   console.log(users);
 
   return (
-    <div className="bg-gray-300">
+    <div className="bg-gray-300 min-h-screen flex justify-center items-center flex-col">
       {/* <Dropdown data={data} /> */}
-      <Table_VirtualScrolling users={users} />
+      {/* <Table_VirtualScrolling users={users} /> */}
+      <Carousel users={users} />
     </div>
   );
 };
